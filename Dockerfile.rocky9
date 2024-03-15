@@ -1,7 +1,7 @@
 FROM rockylinux:9 as builder
 
 ARG SENSU_GO_ASSET_NAME="monitoring-plugins-rocky9"
-ARG SENSU_GO_ASSET_VERSION="2.7.0"
+ARG SENSU_GO_ASSET_VERSION="2.11.0"
 ARG PLUGINS="check_http"
 
 ADD create-sensu-asset /usr/bin/create-sensu-asset

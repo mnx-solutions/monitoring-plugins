@@ -1,7 +1,7 @@
 FROM ubuntu:20.04 as builder
 
 ARG SENSU_GO_ASSET_NAME="monitoring-plugins-ubuntu2004"
-ARG SENSU_GO_ASSET_VERSION="2.7.0"
+ARG SENSU_GO_ASSET_VERSION="2.11.0"
 ARG PLUGINS="check_http"
 
 ADD create-sensu-asset /usr/bin/create-sensu-asset
