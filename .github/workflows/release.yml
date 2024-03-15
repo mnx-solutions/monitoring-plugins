@@ -11,11 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: ./package-build.sh
+      run: ./package-build.sh "$PLATFORMS"
       env:
           TRAVIS_REPO_SLUG: ${{github.repository}}
           TRAVIS_TAG: ${{github.ref_name}}
           FULL_PRUNE: 1
+          PLATFORMS: "ubuntu1404 ubuntu1604 alpine amazon2 amazon2023 debian10 debian11 centos7 centos8 rocky9 ubuntu1804 ubuntu2004 ubuntu2204 raspberrypi64"
     - name: Sha512sum
       run: cd dist && sha512sum ./*.tar.gz > "./monitoring-plugins_${TRAVIS_TAG}_sha512-checksums.txt"      
       env:
