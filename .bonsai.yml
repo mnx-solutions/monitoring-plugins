@@ -92,7 +92,7 @@ builds:
 
 - platform: "ubuntu1604"
   arch: "amd64"
-  asset_filename: "monitoring-plugins-ubuntu1804_#{version}_linux_amd64.tar.gz"
+  asset_filename: "monitoring-plugins-ubuntu1604_#{version}_linux_amd64.tar.gz"
   sha_filename: "#{repo}_#{version}_sha512-checksums.txt"
   filter:
   - "entity.system.os == 'linux'"
