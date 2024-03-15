@@ -80,6 +80,26 @@ builds:
   - "entity.system.platform_version.split('.')[0] == '11'"
   - "entity.system.arch == 'amd64'"
 
+- platform: "ubuntu1404"
+  arch: "amd64"
+  asset_filename: "monitoring-plugins-ubuntu1404_#{version}_linux_amd64.tar.gz"
+  sha_filename: "#{repo}_#{version}_sha512-checksums.txt"
+  filter:
+  - "entity.system.os == 'linux'"
+  - "entity.system.platform == 'ubuntu'"
+  - "entity.system.platform_version.split('.')[0] == '14'"
+  - "entity.system.arch == 'amd64'"
+
+- platform: "ubuntu1604"
+  arch: "amd64"
+  asset_filename: "monitoring-plugins-ubuntu1804_#{version}_linux_amd64.tar.gz"
+  sha_filename: "#{repo}_#{version}_sha512-checksums.txt"
+  filter:
+  - "entity.system.os == 'linux'"
+  - "entity.system.platform == 'ubuntu'"
+  - "entity.system.platform_version.split('.')[0] == '16'"
+  - "entity.system.arch == 'amd64'"
+
 - platform: "ubuntu1804"
   arch: "amd64"
   asset_filename: "monitoring-plugins-ubuntu1804_#{version}_linux_amd64.tar.gz"
@@ -129,4 +149,3 @@ builds:
   - "entity.system.platform == 'xcp-ng'"
   - "entity.system.platform_version.split('.')[0] == '8'"
   - "entity.system.arch == 'amd64'"
-
