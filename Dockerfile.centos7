@@ -10,9 +10,9 @@ WORKDIR /
 
 RUN yum groupinstall -y "Development Tools" && \
     yum install -y curl expat-devel openssl openssl-devel net-snmp-utils bind-utils which procps && \
-    curl -s -L -O https://www.monitoring-plugins.org/download/monitoring-plugins-2.3.3.tar.gz && \
-    tar xzf monitoring-plugins-2.3.3.tar.gz && \
-    cd monitoring-plugins-2.3.3 && \
+    curl -s -L -O https://www.monitoring-plugins.org/download/monitoring-plugins-2.3.5.tar.gz && \
+    tar xzf monitoring-plugins-2.3.5.tar.gz && \
+    cd monitoring-plugins-2.3.5 && \
     ./configure --prefix=/usr --libexecdir=/usr/lib/monitoring-plugins && \
     make && \
     make install
