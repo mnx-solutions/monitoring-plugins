@@ -5,6 +5,7 @@ ARG SENSU_GO_ASSET_VERSION="2.11.0"
 ARG PLUGINS="check_http"
 
 ADD create-sensu-asset /usr/bin/create-sensu-asset
+ADD revert-pr-1868-for-ancient-openssl.patch /revert-pr-1868-for-ancient-openssl.patch
 
 WORKDIR /
 
@@ -14,6 +15,7 @@ RUN apt-get update && \
     tar xzf monitoring-plugins-2.3.5.tar.gz && \
     cd monitoring-plugins-2.3.5 && \
     ./configure --prefix=/usr --libexecdir=/usr/lib/monitoring-plugins && \
+    patch -R -p1 <../revert-pr-1868-for-ancient-openssl.patch && \
     make && \
     make install
 
