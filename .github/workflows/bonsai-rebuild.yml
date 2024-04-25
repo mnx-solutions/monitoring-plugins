@@ -4,7 +4,7 @@ name: Bonsai Request Rebuild
 on:
   workflow_run:
     workflows:
-      - svenstaro/upload-release-action
+      - Publish
     types:
       - completed
 
